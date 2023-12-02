@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" href="favicon.ico"/>
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>Calorie calculator | Калькулятор калорий</title>
+</head>
+<body class="page">
+    <section class="start-setting-page hidden" id="start-page">
+      <form class="start-form">
+        <h1>Calorie calculator <img src="./assets/img/apple.svg" alt="apple"/></h1>
+        <h3>Настройка вашего профиля</h3>
+        <div class="gender flex-box">
+          <button class="start-button gender-button">Женщина</button>
+          <button class="start-button gender-button">Мужчина</button>
+        </div>
+        <div class="parameters flex-box">
+          <input class="start-input input parameters-input" id="input-age" type="text" placeholder="Возраст, г" inputmode="numeric" maxlength="2" required>
+          <input class="start-input input parameters-input" id="input-height" type="text" placeholder="Рост, см" inputmode="numeric" minlength="2" maxlength="3" required>
+          <input class="start-input input parameters-input" id="input-weight" type="text" placeholder="Вес, кг" inputmode="numeric" minlength="2" maxlength="3" required>
+        </div>
+        <div class="activity flex-box">
+          <p class="start-text">Ваш уровень физической активности</p>
+          <div class="flex-box">
+            <button class="start-button activity-button">Низкий</button>
+            <button class="start-button activity-button">Средний</button>
+            <button class="start-button activity-button">Высокий</button>
+          </div>
+        </div>
+        <button class="end-button" id="end-button">Начать</button>
+      </form>
+    </section>
+    <!--end Start Page-->
+
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="nav-item" id="icon-main">
+          <img src="./assets/img/main.svg" alt="main"/>
+        </li>
+        <li class="nav-item" id="icon-products">
+          <img src="./assets/img/list.svg" alt="list"/>
+        </li>
+        <li class="nav-item" id="icon-setting">
+          <img src="./assets/img/setting.svg" alt="setting"/>
+        </li>
+      </ul>
+    </nav>
+    <!--end Navbar-->
+
+    <section class="main" id="main-page">
+      <div class="main-box">
+        <div class="graph-box">
+          <div class="daily-eaten flex-column">
+            <span class="eaten-text">Сегодня съедено</span>
+            <span class="eaten-number"><p id="eaten-count">0</p>ккал</span>
+          </div>
+          <div class="graph-info">
+            <svg viewBox="0 0 33.83098862 33.83098862" width="200" height="200">
+              <circle stroke="#79b48a" stroke-width="2.3" fill="none" cx="16.9" cy="16.5" r="15"></circle>
+              <circle class="graph-circle" stroke="#b23488" stroke-width="2.3" stroke-dasharray="0,100" stroke-linecap="round" fill="none" cx="16.5" cy="16.89" r="15"></circle>
+              <g>
+                <text class="graph-title" fill="#000000" x="16.9" y="16" alignment-baseline="central" text-anchor="middle" font-size="8.5"></text>
+              </g>
+            </svg>
+          </div>
+          <div class="daily-norm flex-column">
+            <span class="norm-text">Суточная норма</span>
+            <span class="norm-number"><p id="norm-count">0</p>ккал</span>
+          </div>
+        </div>
+        <button class="add-button" id="add-food-button">
+          Добавить прием пищи
+          <img src="./assets/img/plus.svg" alt="plus"/>
+        </button>
+
+        <div class="eaten-today-box">
+          <ul class="eaten-list ul" id="eaten-list"></ul>
+        </div>
+      </div>
+    </section>
+    <!--end Main-->
+
+    <section class="products-list hidden" id="products-page">
+      <div class="products-list-box">
+        <div class="product-head">
+          <h2>Список продуктов</h2>
+          <button class="button-transparent" id="add-product-button">
+            <img src="./assets/img/plus.svg" alt="plus"/>
+          </button>
+        </div>
+        <div class="search-product">
+          <input class="search-input input" id="search-input" type="text" placeholder="Поиск по названию продукта" maxlength="30" >
+        </div>
+        <table class="table">
+          <thead class="table-head">
+            <tr>
+              <th>Название продукта</th>
+              <th colspan="2" id="calorie-th" data-order="desc">Калорийность ▲</th>
+          </thead>
+          <tbody id="product-body"></tbody>
+        </table>
+      </div>
+    </section>
+    <!--end Products-list-->
+
+    <section class="setting hidden" id="setting-page">
+      <form class="setting-form">
+        <h2>Параметры вашего профиля</h2>
+        <div class="gender flex-box">
+          <button class="setting-button gender-setting">Женщина</button>
+          <button class="setting-button gender-setting">Мужчина</button>
+        </div>
+        <div class="parameters flex-box">
+          <input class="setting-input input parameters-setting" id="setting-age" type="text" placeholder="Возраст" inputmode="numeric" maxlength="2" required>
+          <input class="setting-input input parameters-setting" id="setting-height"  type="text" placeholder="Рост" inputmode="numeric" maxlength="3" required>
+          <input class="setting-input input parameters-setting" id="setting-weight" type="text" placeholder="Вес" inputmode="numeric" maxlength="3" required>
+        </div>
+        <div class="activity flex-box">
+          <p class="setting-text">Ваш уровень физической активности</p>
+          <div class="flex-box">
+            <button class="setting-button activity-setting">Низкий</button>
+            <button class="setting-button activity-setting">Средний</button>
+            <button class="setting-button activity-setting">Высокий</button>
+          </div>
+        </div>
+        <button class="end-setting-button" id="change-button">Изменить</button>
+      </form>
+    </section>
+    <!--end Setting-->
+
+    <section class="modal" id="modal-food">
+      <div class="modal-food">
+        <div class="modal-box">
+          <div class="modal-head">
+            <h3>Добавить прием пищи</h3>
+            <button class="button-transparent" id="close-modal-food">
+              <img src="./assets/img/close.svg" alt="close"/>
+            </button>
+          </div>
+          <form class="form-food">
+            <ul class="food-list ul" id="food-list"></ul>
+          </form>
+        </div>
+        <button class="add-food-button add-button" id="add-food-modal-button">Добавить</button>
+      </div>
+    </section>
+    <!--end Modal Food-->
+
+    <section class="modal" id="modal-product">
+      <div class="modal-product">
+        <div class="modal-flex">
+          <div class="modal-head">
+            <h3>Добавить продукт</h3>
+            <button class="button-transparent" id="close-modal-product">
+              <img src="./assets/img/close.svg" alt="close"/>
+            </button>
+          </div>
+          <form class="form-product">
+            <input class="input product-input" id="add-product-name" type="text" placeholder="Название продукта" maxlength="30">
+            <input class="input product-input" id="add-product-kcal" type="text" inputmode="numeric" placeholder="Ккал на 100 г" maxlength="5">
+          </form>
+        </div>
+        <button class="add-product-button add-button" id="add-product-modal-button">Добавить</button>
+      </div>
+    </section>
+    <!--end Modal Product-->
+
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>

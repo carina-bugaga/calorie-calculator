@@ -1,0 +1,85 @@
+/* START PAGE */
+
+.start-setting-page {
+  background-color: var(--green);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: transform 0.5s ease-out;
+  transform: translatex(0%);
+}
+.start-form {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  padding: 0 15px;
+  gap: 15px;
+}
+h1 {
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+}
+h1 img {
+  margin-left: 5px;
+}
+h3 {
+  margin: 0;
+}
+.flex-box {
+  display: flex;
+  gap: 7px;
+}
+.start-button {
+  background-color: var(--green-light);
+  border: 2px solid var(--black);
+  border-radius: 6px;
+  padding: 7px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+.start-input {
+  background-color: var(--rose);
+  padding: 7px;
+  width: 100%;
+}
+.activity {
+  flex-direction: column;
+}
+.start-text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.end-button {
+  background-color: var(--green-btn);
+  padding: 10px 15px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  border: 2px solid var(--black);
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+}
+.choose-button {
+  background: var(--green-choose) !important;
+}
+.hidden-page {
+  transform: translatex(100%);
+}
+
+@media ((min-width: 300px) and (max-width: 600px)) {
+  .start-form {
+    width: 320px;
+  }
+}

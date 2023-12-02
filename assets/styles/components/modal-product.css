@@ -1,0 +1,39 @@
+/* MODAL PRODUCT */
+
+.modal-product {
+  background-color: var(--green-light);
+  margin: 15% auto;
+  padding: 25px;
+  border: 2px solid var(--black);
+  border-radius: 16px;
+  width: 350px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 5px;
+}
+.form-product {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.product-input {
+  background-color: var(--rose);
+  padding: 5px;
+}
+.add-product-button {
+  width: 50%;
+}
+
+@media ((min-width: 300px) and (max-width: 500px)) {
+  .modal-product {
+    padding: 10px;
+    margin: 45px auto;
+    width: 90%;
+    max-width: 320px;
+    height: max-content;
+  }
+}

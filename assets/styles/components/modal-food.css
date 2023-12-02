@@ -1,0 +1,86 @@
+/* MODAL FOOD */
+
+.modal-food {
+  background-color: var(--green-light);
+  margin: 15% auto;
+  padding: 25px;
+  border: 2px solid var(--black);
+  border-radius: 16px;
+  width: 350px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 5px;
+}
+.modal-box {
+  width: 100%;
+}
+.form-food {
+  height: 400px;
+}
+.form-food ul{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.form-food ul::-webkit-scrollbar {
+  width: 10px;
+}
+.form-food ul::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.form-food ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, var(--green-btn), var(--green-dark));
+}
+.checkbox-block {
+  display: flex;
+}
+.food-item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+label {
+  font-size: 16px;
+  font-weight: 500;
+}
+.input-item {
+  background-color: var(--rose);
+  padding: 5px;
+  width: 30%;
+}
+.add-food-button {
+  margin-top: 10px;
+  width: 50%;
+}
+
+@media ((min-width: 300px) and (max-width: 500px)) {
+  .modal-food {
+    padding: 10px;
+    margin: 45px auto;
+    width: 90%;
+    max-width: 320px;
+  }
+  .modal-head h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  #label-checkbox {
+    font-size: 15px;
+  }
+  .input-item::placeholder {
+    font-size: 14px;
+  }
+  .form-food ul::-webkit-scrollbar {
+    width: 7px;
+  }
+  .form-food ul::-webkit-scrollbar-track {
+    border-radius: 7px;
+  }
+  .form-food ul::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+  }
+}

@@ -1,0 +1,42 @@
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  background-color: var(--green);
+  border-bottom: 2px solid var(--black);
+}
+.nav-menu {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.nav-item:hover {
+  animation: tilt-shaking 0.35s linear infinite;
+}
+.nav-text {
+  font-size: 22px;
+}
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(35deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-35deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media ((min-width: 300px) and (max-width: 700px)) {
+  .navbar {
+    padding: 15px 0;
+  }
+}

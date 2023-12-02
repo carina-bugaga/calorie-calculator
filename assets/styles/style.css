@@ -1,0 +1,100 @@
+@import url(./components/start-page.css);
+@import url(./components/navbar.css);
+@import url(./components/main.css);
+@import url(./components/modal-food.css);
+@import url(./components/checkbox.css);
+@import url(./components/product-list.css);
+@import url(./components/modal-product.css);
+@import url(./components/setting.css);
+
+:root {
+  --beage: #d2e6d7;
+  --rose: #F2D8D8;
+  --cream: #D3A3B2;
+  --pink: #FFCCE1;
+  --peach-dark: #F198AF;
+  --pink-dark: #E966A0;
+  --bardo: #7A316F;
+  --green: #89B9AD;
+  --green-light: #C8E4B2;
+  --green-dark: #89B9AD;
+  --green-btn: #29ADB2;
+  --green-choose: #2D9596;
+  --gray-dark: #545B77;
+  --black: #000000;
+  --modal-bg: #00000061;
+  --red: #FF2171;
+}
+
+.page {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--beage);
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: var(--modal-bg);
+}
+.modal-flex {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.modal-head h3 {
+  margin: 0;
+}
+.button-transparent {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.input {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  border: 2px solid var(--black);
+  border-radius: 6px;
+}
+input::placeholder {
+  color: var(--gray-dark);
+}
+
+@media ((min-width: 300px) and (max-width: 700px)) {
+  .modal-head h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  .input {
+    font-size: 16px;
+  }
+}
