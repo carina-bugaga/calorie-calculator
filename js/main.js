@@ -112,6 +112,7 @@ buttonEnd.addEventListener('click', () => {
     localStorage.setItem('user', JSON.stringify(User));
     pageStart.classList.add('hidden-page');
   }
+  buildMainPage();
 })
 
 //Переключение между страницами
