@@ -14,7 +14,7 @@
 - [Игра «Угадай число»](https://github.com/carina-bugaga/guess-the-number.git "Игра «Угадай число»"),
 - Приложение «Калькулятор калорий»,
 - [Игра «Крестики нолики»](https://github.com/carina-bugaga/tic-tac-toe.git "Игра «Крестики нолики»"),
-- [Игра «Тетрис»](https://github.com/carina-bugaga/tetris.git "Игра «Тетрис»")
+- [Игра «Тетрис»](https://github.com/carina-bugaga/tetris.git "Игра «Тетрис»"),
 - [Приложение «Генератор мемов»](https://github.com/carina-bugaga/meme-generator.git "Приложение «Генератор мемов»").
 
 ------------
