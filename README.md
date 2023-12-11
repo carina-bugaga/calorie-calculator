@@ -1,8 +1,8 @@
 # Приложение «Калькулятор калорий»
 > Интерактивное приложение, для отслеживания потребления калорий.
 
-![2-1](https://github.com/carina-bugaga/calorie-calculator/assets/98953836/c8fb864f-2fe2-4c98-b6f0-e8e4915ccaaa)
-![2-2](https://github.com/carina-bugaga/calorie-calculator/assets/98953836/030f5c04-8e95-45bb-9746-bdb884ad186b)
+![2-1](https://github.com/carina-bugaga/carina-bugaga/assets/98953836/f54e26d9-c728-4ec1-8756-8d1ec302a2ec)
+![2-2](https://github.com/carina-bugaga/carina-bugaga/assets/98953836/f56b2be9-fe83-42c0-b2d9-785d0d9bf714)
 
 ------------
 
@@ -13,6 +13,9 @@
 ### Проекты:
 - [Игра «Угадай число»](https://github.com/carina-bugaga/guess-the-number.git "Игра «Угадай число»"),
 - Приложение «Калькулятор калорий»,
+- [Игра «Крестики нолики»](https://github.com/carina-bugaga/tic-tac-toe.git "Игра «Крестики нолики»"),
+- [Игра «Тетрис»](https://github.com/carina-bugaga/tetris.git "Игра «Тетрис»")
+- [Приложение «Генератор мемов»](https://github.com/carina-bugaga/meme-generator.git "Приложение «Генератор мемов»").
 
 ------------
 ### Требования к выполнению проекта:
